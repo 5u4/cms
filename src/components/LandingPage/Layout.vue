@@ -1,18 +1,20 @@
 <template>
-    <div>
+    <Jumbotron>
         <Logo />
         <Button />
-    </div>
+    </Jumbotron>
 </template>
 
 <script>
 import Logo from '../Share/Logo';
 import Button from '../Share/Button';
+import Jumbotron from '../Share/Jumbotron';
 
 export default {
     components: {
         Logo,
-        Button
+        Button,
+        Jumbotron
     }
 }
 </script>
