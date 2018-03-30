@@ -1,8 +1,14 @@
 <template>
-    <Jumbotron>
-        <Logo />
-        <Button />
-    </Jumbotron>
+    <v-flex fill-height fluid>
+        <Jumbotron>
+            <v-container>
+                <v-layout column align-center>
+                    <Logo style="position: relative; top: 30em;"/>
+                    <Button style="position: relative; top: 38em;">Start Order</Button>
+                </v-layout>
+            </v-container>
+        </Jumbotron>
+    </v-flex>
 </template>
 
 <script>

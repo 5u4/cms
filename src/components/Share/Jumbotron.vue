@@ -1,17 +1,21 @@
 <template>
-    <div>
+    <v-jumbotron :src="FoodImage" style="height: 100%">
         <slot></slot>
-    </div>
+    </v-jumbotron>
 </template>
 
 <script>
-export default {
+import FoodImage from '../../assets/jumbotron.jpg';
 
+export default {
+    data() {
+        return {
+            FoodImage
+        }
+    }
 }
 </script>
 
-<style scoped>
-div {
-    background-color: darkgray;
-}
+<style>
+
 </style>

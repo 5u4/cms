@@ -1,12 +1,16 @@
 <template>
-    <div>
-        <p>Logo</p>
-    </div>
+    <img :src="LogoWhite" style="width: 20%; height: auto; display: block;"/>
 </template>
 
 <script>
-export default {
+import LogoWhite from '../../assets/FoodLogoWhite.png';
 
+export default {
+    data() {
+        return {
+            LogoWhite
+        }
+    }
 }
 </script>
 
