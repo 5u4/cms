@@ -16,7 +16,7 @@ export default new Router({
       component: LandingPage
     },
     {
-      path: '/order',
+      path: '/menu',
       name: 'OrderPage',
       component: OrderPage
     }

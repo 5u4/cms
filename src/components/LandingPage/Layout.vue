@@ -4,7 +4,7 @@
             <v-container>
                 <v-layout column align-center>
                     <Logo style="position: relative; top: 30em;"/>
-                    <Button toLink="order" style="position: relative; top: 38em;">Start Order</Button>
+                    <Button toLink="menu" style="position: relative; top: 38em;">Start Order</Button>
                 </v-layout>
             </v-container>
         </Jumbotron>
