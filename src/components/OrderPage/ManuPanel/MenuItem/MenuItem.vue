@@ -3,16 +3,16 @@
         <v-container fill-height fluid row>
             <v-layout row>
                 <!-- Item Pic -->
-                <v-flex xs3 style="height: 45px; width: auto; backgroundColor: red">
+                <v-flex xs3 style="height: 45px; width: auto;">
                     <v-card-media src="Apple"></v-card-media>
                 </v-flex>
                 <v-flex xs8>
                     <v-layout column>
                         <v-flex>
-                            Apple
+                            {{ name }}
                         </v-flex>
                         <v-flex>
-                            $10
+                            {{ price }}
                         </v-flex>
                     </v-layout>
                 </v-flex>
@@ -22,13 +22,11 @@
 </template>
 
 <script>
-import Apple from '../../../../assets/apple.png';
 
 export default {
-    data() {
-        return {
-            Apple
-        }
+    props: {
+        name: String,
+        price: Number
     }
 }
 </script>

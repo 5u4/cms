@@ -6,30 +6,17 @@
                 <h1>Menu</h1>
             </v-flex>
             <!-- Items -->
-            <v-layout row wrap align-content-start>
-                <v-flex xs3 style="margin: 7px 15px">
-                    <MenuItem />
-                </v-flex>
-                <v-flex xs3 style="margin: 7px 15px">
-                    <MenuItem />
-                </v-flex>
-                <v-flex xs3 style="margin: 7px 15px">
-                    <MenuItem />
-                </v-flex>
-                <v-flex xs3 style="margin: 7px 15px">
-                    <MenuItem />
-                </v-flex>
-            </v-layout>
+            <MenuItems />
         </v-layout>
     </v-container>
 </template>
 
 <script>
-import MenuItem from './MenuItem/MenuItem';
+import MenuItems from './MenuItem/MenuItems';
 
 export default {
     components: {
-        MenuItem
+        MenuItems
     }
 }
 </script>
