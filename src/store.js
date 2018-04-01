@@ -26,7 +26,7 @@ const store = new Vuex.Store({
             return state.cartItems;
         },
         getTotalPrice(state) {
-            return state.cartItems.map(item => item.totalPrice).reduce((a, b) => a + b);
+            return state.cartItems.map(item => item.totalPrice).reduce((a, b) => a + b).toFixed(2);
         }
     },
     mutations: {

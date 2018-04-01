@@ -45,7 +45,7 @@
 export default {
     props: {
         name: String,
-        price: Number,
+        price: Number|String,
         quantity: Number
     }
 }

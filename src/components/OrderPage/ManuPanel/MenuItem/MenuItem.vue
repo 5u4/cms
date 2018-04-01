@@ -12,7 +12,7 @@
                             {{ name }}
                         </v-flex>
                         <v-flex>
-                            {{ price }}
+                            ${{ price }}
                         </v-flex>
                     </v-layout>
                 </v-flex>
@@ -26,7 +26,7 @@
 export default {
     props: {
         name: String,
-        price: Number
+        price: Number|String
     }
 }
 </script>

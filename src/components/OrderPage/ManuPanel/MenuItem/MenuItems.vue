@@ -1,7 +1,7 @@
 <template>
     <v-layout row wrap align-content-start>
         <v-flex v-for="item in getMenuItems" :key="item.id" xs3 style="margin: 7px 15px" @click="addMenuItemIntoCart(item.id)">
-            <MenuItem :name="item.name" :price="item.price" />
+            <MenuItem :name="item.name" :price="item.price.toFixed(2)" />
         </v-flex>
     </v-layout>
 </template>
