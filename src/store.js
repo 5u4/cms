@@ -26,7 +26,12 @@ const store = new Vuex.Store({
             return state.cartItems;
         },
         getTotalPrice(state) {
-            return state.cartItems.map(item => item.price * item.quantity).reduce((a, b) => a + b).toFixed(2);
+            const totalPrices = state.cartItems.map(item => item.price * item.quantity);
+            if (totalPrices.length == 0) {
+                return 0;
+            } else {
+                return totalPrices.reduce((a, b) => a + b).toFixed(2);
+            }
         }
     },
     mutations: {
@@ -49,7 +54,10 @@ const store = new Vuex.Store({
         },
         /* payload: {item: cartItem} */
         removeCartItem(state, payload) {
-
+            const cartItemIndex = state.cartItems.indexOf(payload.item);
+            if (cartItemIndex > -1) {
+                state.cartItems.splice(cartItemIndex, 1);
+            }
         }
     }
 });

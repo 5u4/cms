@@ -32,7 +32,7 @@
             <!-- Delete -->
             <v-flex xs1 offset-xs1>
                 <v-btn-toggle class="py-1">
-                    <v-btn flat>
+                    <v-btn flat @click="removeItem()">
                         <v-icon>close</v-icon>
                     </v-btn>
                 </v-btn-toggle>
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-    /* item: {id: Number, name: String, totalPrice: Number, quantity: Number} */
+    /* item: {id: Number, name: String, price: Number, quantity: Number} */
     props: {
         item: Object
     },
@@ -58,6 +58,9 @@ export default {
                 quantity: quantity,
                 item: this.item,//this.getCartItems[cartIndex],
             });
+        },
+        removeItem() {
+            this.$store.commit('removeCartItem', {item: this.item});
         }
     }
 }
