@@ -14,7 +14,8 @@ const store = new Vuex.Store({
             {id: 6, name: 'banana', price: 3.2}
         ],
         cartItems: [
-            {id: 1, name: 'apple', price: 3, quantity: 2}
+            {id: 1, name: 'apple', totalPrice: 6, quantity: 2},
+            {id: 3, name: 'grape', totalPrice: 5, quantity: 1}
         ]
     },
     getters: {
@@ -23,6 +24,9 @@ const store = new Vuex.Store({
         },
         getCartItems(state) {
             return state.cartItems;
+        },
+        getTotalPrice(state) {
+            return state.cartItems.map(item => item.totalPrice).reduce((a, b) => a + b);
         }
     }
 });
