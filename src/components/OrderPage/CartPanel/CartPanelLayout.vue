@@ -12,7 +12,7 @@
             <v-flex xs1 style="margin: 5px 0">
                 <v-card color="teal lighten-5">
                     <v-card-text>${{ totalPrice }}</v-card-text>
-                    <v-btn flat block>ORDER</v-btn>
+                    <v-btn flat block :disabled="totalPrice <= 0">ORDER</v-btn>
                 </v-card>
             </v-flex>
         </v-layout>
