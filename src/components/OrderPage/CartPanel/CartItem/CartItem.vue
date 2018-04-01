@@ -8,15 +8,15 @@
             <v-flex xs5 offset-xs1>
                 <v-layout column>
                     <v-flex>
-                        {{ name }}
+                        {{ item.name }}
                     </v-flex>
                     <v-flex>
                         <v-layout row>
                             <v-flex class="py-1">
                                 <v-btn-toggle>
-                                    <v-btn xs1 small flat><v-icon>remove</v-icon></v-btn>
-                                    <v-btn xs1 small flat disabled><span class="black--text">{{ quantity }}</span></v-btn>
-                                    <v-btn xs1 small flat><v-icon>add</v-icon></v-btn>
+                                    <v-btn xs1 small flat :disabled="item.quantity <= 0" @click="updateCartQuantity(-1)"><v-icon>remove</v-icon></v-btn>
+                                    <v-btn xs1 small flat disabled><span class="black--text">{{ item.quantity }}</span></v-btn>
+                                    <v-btn xs1 small flat @click="updateCartQuantity(1)"><v-icon>add</v-icon></v-btn>
                                 </v-btn-toggle>
                             </v-flex>
                         </v-layout>
@@ -26,7 +26,7 @@
             <!-- Price -->
             <v-flex xs2>
                 <v-btn-toggle class="py-2">
-                    <v-btn xs1 small flat disabled><span class="black--text">${{ price }}</span></v-btn>
+                    <v-btn xs1 small flat disabled><span class="black--text">${{ itemTotalPrice }}</span></v-btn>
                 </v-btn-toggle>
             </v-flex>
             <!-- Delete -->
@@ -43,10 +43,22 @@
 
 <script>
 export default {
+    /* item: {id: Number, name: String, totalPrice: Number, quantity: Number} */
     props: {
-        name: String,
-        price: Number|String,
-        quantity: Number
+        item: Object
+    },
+    computed: {
+        itemTotalPrice() {
+            return (this.item.price * this.item.quantity).toFixed(2);
+        }
+    },
+    methods: {
+        updateCartQuantity(quantity) {
+            this.$store.commit('updateCartItemQuantity', {
+                quantity: quantity,
+                item: this.item,//this.getCartItems[cartIndex],
+            });
+        }
     }
 }
 </script>
