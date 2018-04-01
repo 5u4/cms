@@ -1,8 +1,13 @@
-# cms
+# Food Content Management System
 
-> A Vue.js project
+[Demo](https://senhungwong.github.io/food-content-management-system/)
+## Features
 
-## Build Setup
+## v0.1.0
+
+![v0.1.0](.guide/v0.1.0.gif)
+
+## Build
 
 ``` bash
 # install dependencies
