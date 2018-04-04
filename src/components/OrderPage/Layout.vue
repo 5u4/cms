@@ -9,6 +9,7 @@
             <v-flex md4 lg3 xl2>
                 <CartPanel></CartPanel>
             </v-flex>
+            <OrderModal></OrderModal>
         </v-layout>
     </v-flex>
 </template>
@@ -16,11 +17,13 @@
 <script>
 import MenuPanel from './ManuPanel/ManuPanelLayout';
 import CartPanel from './CartPanel/CartPanelLayout';
+import OrderModal from './OrderModal/OrderModalLayout';
 
 export default {
     components: {
         MenuPanel,
-        CartPanel
+        CartPanel,
+        OrderModal
     }
 }
 </script>

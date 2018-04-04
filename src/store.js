@@ -13,10 +13,8 @@ const store = new Vuex.Store({
             {id: 5, name: 'carrot', price: 2.8},
             {id: 6, name: 'banana', price: 3.2}
         ],
-        cartItems: [
-            {id: 1, name: 'apple', price: 3, quantity: 2},
-            {id: 3, name: 'grape', price: 5, quantity: 1}
-        ]
+        cartItems: [],
+        purchasing: false
     },
     getters: {
         getMenuItems(state) {
@@ -32,6 +30,9 @@ const store = new Vuex.Store({
             } else {
                 return totalPrices.reduce((a, b) => a + b).toFixed(2);
             }
+        },
+        isPurchasing(state) {
+            return state.purchasing;
         }
     },
     mutations: {
@@ -58,6 +59,9 @@ const store = new Vuex.Store({
             if (cartItemIndex > -1) {
                 state.cartItems.splice(cartItemIndex, 1);
             }
+        },
+        toggleIsPurchasing(state) {
+            state.purchasing = !state.purchasing;
         }
     }
 });
