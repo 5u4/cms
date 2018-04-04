@@ -1,6 +1,6 @@
 # Food Content Management System
 
-[Demo](https://senhungwong.github.io/content-management-system/)
+[Demo](http://cms.senhung.net/)
 ## Features
 
 **New Features:**
