@@ -3,6 +3,21 @@
 [Demo](https://senhungwong.github.io/content-management-system/)
 ## Features
 
+**New Features:**
+
+ - Router navigate pages
+ - Show menu and cart items
+ - Add/Subtract/Remove menu item to cart
+ - Order Modal
+
+**In Coming Features:**
+
+ - User Login/Register Page
+
+## v0.1.1
+
+![v0.1.1](.guide/v0.1.1.gif)
+
 ## v0.1.0
 
 ![v0.1.0](.guide/v0.1.0.gif)
