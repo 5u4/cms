@@ -14,7 +14,13 @@ const store = new Vuex.Store({
             {id: 6, name: 'banana', price: 3.2}
         ],
         cartItems: [],
-        purchasing: false
+        purchasing: false,
+        theme: {
+            dark: false,
+            mainColor: '#80CBC4',
+            secondaryColor: '',
+            cardColor: 'teal lighten-5'
+        }
     },
     getters: {
         getMenuItems(state) {

@@ -1,5 +1,5 @@
 <template>
-    <v-card hover height="75px" color="teal lighten-5">
+    <v-card hover height="75px" :color="this.$store.state.theme.cardColor">
         <v-container fill-height fluid row @click="addMenuItemIntoCart()">
             <v-layout row>
                 <!-- Item Pic -->
