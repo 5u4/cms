@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import LogoWhite from '../../assets/FoodLogoWhite.png';
+import LogoWhite from '../../assets/Logo/LOGO-WHITE.png';
 
 export default {
     data() {
