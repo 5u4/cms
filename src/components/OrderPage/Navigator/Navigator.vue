@@ -5,7 +5,7 @@
         <v-icon>person</v-icon>
         Current User
         <!-- Login/Register -->
-        <v-btn flat>
+        <v-btn flat @click="toggleIsLogining()">
             Login/Register
         </v-btn>
         <!-- Logout -->
@@ -17,7 +17,11 @@
 
 <script>
 export default {
-
+    methods: {
+        toggleIsLogining() {
+            this.$store.commit('toggleIsLogining');
+        }
+    }
 }
 </script>
 

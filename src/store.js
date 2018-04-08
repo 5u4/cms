@@ -20,7 +20,8 @@ const store = new Vuex.Store({
             mainColor: '#80CBC4',
             secondaryColor: '',
             cardColor: 'teal lighten-5'
-        }
+        },
+        Logining: false
     },
     getters: {
         getMenuItems(state) {
@@ -39,6 +40,9 @@ const store = new Vuex.Store({
         },
         isPurchasing(state) {
             return state.purchasing;
+        },
+        isLogining(state) {
+            return state.Logining;
         }
     },
     mutations: {
@@ -68,6 +72,9 @@ const store = new Vuex.Store({
         },
         toggleIsPurchasing(state) {
             state.purchasing = !state.purchasing;
+        },
+        toggleIsLogining(state) {
+            state.Logining = !state.Logining;
         }
     }
 });

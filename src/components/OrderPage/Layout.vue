@@ -11,6 +11,7 @@
                 <CartPanel></CartPanel>
             </v-flex>
             <OrderModal></OrderModal>
+            <Auth></Auth>
         </v-layout>
     </v-flex>
 </template>
@@ -20,13 +21,15 @@ import MenuPanel from './ManuPanel/ManuPanelLayout';
 import CartPanel from './CartPanel/CartPanelLayout';
 import OrderModal from './OrderModal/OrderModalLayout';
 import Navigator from './Navigator/Navigator';
+import Auth from './AuthorizationModal/AuthorizationLayout';
 
 export default {
     components: {
         MenuPanel,
         CartPanel,
         OrderModal,
-        Navigator
+        Navigator,
+        Auth
     }
 }
 </script>
