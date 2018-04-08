@@ -9,6 +9,7 @@ Vue.use(Router)
 Vue.use(Vuetify)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -16,7 +17,7 @@ export default new Router({
       component: LandingPage
     },
     {
-      path: '/menu',
+      path: '/items',
       name: 'OrderPage',
       component: OrderPage
     }

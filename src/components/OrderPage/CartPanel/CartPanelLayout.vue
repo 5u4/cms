@@ -1,5 +1,5 @@
 <template>
-    <v-container fill-height style="backgroundColor: #80CBC4">
+    <v-container fill-height :style="'backgroundColor: ' + this.$store.state.theme.mainColor">
         <v-layout column>
             <!-- Cart Title -->
             <v-flex xs1 style="text-align: left; margin: 0 15px">
@@ -10,9 +10,11 @@
             <!-- TotalPrice + Order -->
             <v-spacer></v-spacer>
             <v-flex xs1 style="margin: 5px 0">
-                <v-card color="teal lighten-5">
+                <v-card :color="this.$store.state.theme.cardColor">
                     <v-card-text>${{ totalPrice }}</v-card-text>
-                    <v-btn flat block :disabled="totalPrice <= 0" @click="purchase()">ORDER</v-btn>
+                    <v-btn flat block :disabled="totalPrice <= 0" @click="purchase()">
+                        ORDER
+                    </v-btn>
                 </v-card>
             </v-flex>
         </v-layout>

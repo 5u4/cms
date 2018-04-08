@@ -1,26 +1,24 @@
 <template>
     <v-flex fill-height fluid>
-        <Jumbotron>
+        <v-jumbotron :style="'height: 100%; backgroundColor: ' + this.$store.state.theme.mainColor">
             <v-container>
                 <v-layout column align-center>
-                    <Logo style="position: relative; top: 30em;"/>
-                    <Button toLink="menu" style="position: relative; top: 38em;">Start Order</Button>
+                    <Logo style="position: fixed; top: 20em;"/>
+                    <v-btn to="items" append style="position: relative; top: 38em;">
+                        Start
+                    </v-btn>
                 </v-layout>
             </v-container>
-        </Jumbotron>
+        </v-jumbotron>
     </v-flex>
 </template>
 
 <script>
 import Logo from '../Share/Logo';
-import Button from '../Share/Button';
-import Jumbotron from '../Share/Jumbotron';
 
 export default {
     components: {
-        Logo,
-        Button,
-        Jumbotron
+        Logo
     }
 }
 </script>
