@@ -20,7 +20,7 @@
 import MenuPanel from './ManuPanel/ManuPanelLayout';
 import CartPanel from './CartPanel/CartPanelLayout';
 import OrderModal from './OrderModal/OrderModalLayout';
-import Navigator from './Navigator/Navigator';
+import Navigator from '../Share/Navigator';
 import Auth from './AuthorizationModal/AuthorizationLayout';
 
 export default {
