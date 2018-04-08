@@ -33,7 +33,7 @@
                     required>
                 </v-text-field>
                 <!-- Register -->
-                <v-btn flat color="success" :disabled="!valid">Register</v-btn>
+                <v-btn flat block color="success" :disabled="!valid">Register</v-btn>
             </v-form>
         </v-container>
     </v-card>

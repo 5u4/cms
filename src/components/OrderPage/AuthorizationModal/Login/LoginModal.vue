@@ -35,7 +35,7 @@
                     type="password">
                 </v-text-field>
                 <!-- Login -->
-                <v-btn flat color="success" :disabled="!valid">Login</v-btn>
+                <v-btn flat block color="success" :disabled="!valid">Login</v-btn>
             </v-form>
         </v-container>
     </v-card>
