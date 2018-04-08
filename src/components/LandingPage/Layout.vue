@@ -4,8 +4,8 @@
             <v-container>
                 <v-layout column align-center>
                     <Logo style="position: fixed; top: 20em;"/>
-                    <v-btn to="menu" append style="position: relative; top: 38em;">
-                        Start Order
+                    <v-btn to="items" append style="position: relative; top: 38em;">
+                        Start
                     </v-btn>
                 </v-layout>
             </v-container>
