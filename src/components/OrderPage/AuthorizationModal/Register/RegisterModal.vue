@@ -1,6 +1,9 @@
 <template>
     <v-card flat>
         <v-container>
+            <v-alert type="error" dismissible v-model="showMessage">
+                {{responseText}}
+            </v-alert>
             <v-form lazy-validation v-model="valid" ref="form">
                 <!-- Username -->
                 <v-text-field 
@@ -33,7 +36,7 @@
                     required>
                 </v-text-field>
                 <!-- Register -->
-                <v-btn flat block color="success" :disabled="!valid">Register</v-btn>
+                <v-btn flat block color="success" :disabled="!valid" @click="register()">Register</v-btn>
             </v-form>
         </v-container>
     </v-card>
@@ -58,7 +61,49 @@ export default {
             passwordRules: [
                 v => !!v || 'Password is required',
                 v => (v && v.length >= 8) || 'Password is longer than 8 characters'
-            ]
+            ],
+            resource: {},
+            responseText: '',
+            showMessage: false
+        }
+    },
+    created() {
+        const customActions = {
+            createUser: {method: 'POST'}
+        };
+        this.resource = this.$resource('api/v1/users/register', {}, customActions);
+    },
+    methods: {
+        register() {
+            this.resource.createUser({
+                username: this.username,
+                email: this.email,
+                password: this.password,
+                password_confirmation: this.passwordConfirmation
+            }).then(response => { /* Created */
+                /* Login */
+            }, error => { /* Having Errors */
+                const errors = error.body.error.message;
+                this.responseText = '';
+
+                if (errors.username) {
+                    this.responseText += errors.username + " ";
+                }
+
+                if (errors.email) {
+                    this.responseText += errors.email + " ";
+                }
+
+                if (errors.password) {
+                    this.responseText += errors.password + " ";
+                }
+
+                if (errors.password_confirmation) {
+                    this.responseText += errors.password_confirmation + " ";
+                }
+
+                this.showMessage = true;
+            });
         }
     }
 }
