@@ -1,6 +1,5 @@
-# Food Content Management System
+# Content Management System
 
-[Demo](http://cms.senhung.net/)
 ## Features
 
 **New Features:**
